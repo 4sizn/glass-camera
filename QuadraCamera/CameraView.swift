@@ -109,7 +109,7 @@ struct CameraView: View {
                         HStack {
                             HStack(spacing: 6) {
                                 Circle().fill(model.showOriginal ? .white : accent).frame(width: 5,height: 5)
-                                Text(model.showOriginal ? "ORIGINAL" : "GLASS").tracking(1.7)
+                                Text(model.showOriginal ? "ORIGINAL" : "YURI").tracking(1.7)
                             }
                             Spacer()
                             if let started=model.recordingStartedAt {
@@ -180,7 +180,7 @@ struct CameraView: View {
     private var header: some View {
         HStack(alignment: .center) {
             VStack(alignment: .leading,spacing: 3) {
-                Text("GLASS CAMERA").font(.system(size: 19,weight: .light,design: .rounded)).tracking(4)
+                Text("YURI").font(.system(size: 22,weight: .light,design: .rounded)).tracking(6)
                 Text("A DIFFERENT WAY TO SEE").font(.system(size: 8,weight: .medium,design: .monospaced)).tracking(1.5).foregroundStyle(.gray)
             }
             Spacer()
