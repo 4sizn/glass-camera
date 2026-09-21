@@ -254,4 +254,45 @@ final class QuadraUITests: XCTestCase {
         attachment.lifetime = .keepAlways
         add(attachment)
     }
+
+    // App Store marketing captures. Sample mode keeps the simulator free of camera
+    // hardware and permission dialogs; each stop is attached as store-N-<name>.
+    @MainActor func testAppStoreScreenshots() throws {
+        let app=XCUIApplication()
+        app.launchArguments=["--sample"]
+        app.launch()
+        XCTAssertTrue(app.buttons["reset-controls"].waitForExistence(timeout: 30))
+        app.buttons["reset-controls"].tap()
+        sleep(2)
+        shoot(app,"store-1-quadra")
+
+        app.buttons["pattern-diamond"].tap()
+        sleep(2)
+        shoot(app,"store-2-diamond")
+
+        app.buttons["pattern-crossLarge"].tap()
+        sleep(2)
+        shoot(app,"store-3-cross")
+
+        app.buttons["pattern-quadra"].tap()
+        app.buttons["control-relief"].tap()
+        dragDial(in: app,toRight: true)
+        sleep(2)
+        shoot(app,"store-4-dial")
+
+        app.buttons["compare"].tap()
+        XCTAssertTrue(app.staticTexts["ORIGINAL"].waitForExistence(timeout: 10))
+        sleep(1)
+        shoot(app,"store-5-original")
+        app.buttons["compare"].tap()
+
+        app.buttons["mode-video"].tap()
+        sleep(2)
+        shoot(app,"store-6-video")
+    }
+
+    @MainActor private func shoot(_ app: XCUIApplication,_ name: String) {
+        let shot=XCTAttachment(screenshot: app.screenshot())
+        shot.name=name; shot.lifetime = .keepAlways; add(shot)
+    }
 }

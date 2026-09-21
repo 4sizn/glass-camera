@@ -5,3 +5,7 @@ artifacts/
 *.xcresult/
 *.xcuserstate
 xcuserdata/
+.artifacts/
+appstore/export*/
+appstore/editor/node_modules/
+appstore/editor/.next/

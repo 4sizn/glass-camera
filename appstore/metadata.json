@@ -1,0 +1,35 @@
+{
+  "bundleId": "com.lotus.quadraglass",
+  "locales": {
+    "ko": {
+      "name": "유리 카메라",
+      "subtitle": "유리블록 너머로 찍는 사진 동영상",
+      "keywords": "글라스,글래스,필터,효과,굴절,왜곡,프리즘,모자이크,렌즈,감성,보정,실시간,아트,촬영,QUADRA,레트로,분위기,인생샷,브이로그,셀카",
+      "promotionalText": "패턴 유리 세 가지와 여섯 개의 다이얼. 눈앞의 장면이 굴절되는 순간을 실시간으로 보면서 찍습니다.",
+      "description": "눈앞의 장면을 패턴 유리 너머로 바라봅니다. 미리보기에서 보이는 그대로 사진과 동영상이 됩니다.\n\n촬영 후에 씌우는 필터가 아닙니다. 빛이 공기에서 유리로, 다시 공기로 꺾이는 굴절을 화면에 그대로 계산해 보여 줍니다. 그래서 유리를 조금만 두껍게 해도, 셀을 조금만 키워도 장면이 통째로 달라집니다.\n\n■ 패턴 세 가지\n쿼드라 — 넓은 사각 면이 부드럽게 이어지는 기본 패턴\nCross Large — 굵은 십자 리브가 규칙적으로 지나가는 패턴\n다이아몬드 — 대각선 면이 장면을 비스듬히 자르는 패턴\n\n■ 반원 다이얼로 유리를 직접 만듭니다\n셀 크기, 굴곡, 모서리 둥글기, 두께, 경계 굴곡, 반사 밝기까지 손끝으로 돌려서 맞춥니다. 조절 창이 피사체를 가리지 않습니다. 값은 저장되고, 전체 초기화 한 번으로 처음 상태로 돌아갑니다.\n\n■ 원본과 나란히\n원본 버튼을 누르면 유리 없는 장면이 바로 나옵니다. 무엇이 달라졌는지 두 번 탭으로 확인합니다.\n\n■ 동영상도 같은 유리로\n녹화 중에도 패턴과 다이얼을 바꿀 수 있습니다. 바뀌는 과정이 그대로 영상에 담깁니다. 마이크를 허용하면 소리도 함께 녹음됩니다.\n\n■ 기기 안에서만\n계정이 필요 없습니다. 서버로 보내는 사진이 없습니다. 모든 처리는 아이폰의 GPU에서 끝나고, 결과물은 사진 보관함에 저장됩니다.\n\n■ 알아두실 점\n프로토타입 단계의 앱입니다. 조명 반사는 가상 실내 조명이며, 실제 유리 제품과의 광학적 일치는 아직 검증하지 않았습니다. 촬영은 세로 3:4 화면이며 가로 모드는 지원하지 않습니다. 동영상은 앱이 화면에 있을 때만 녹화됩니다.\n\niOS 17 이상, 카메라가 있는 아이폰이 필요합니다.",
+      "supportUrl": "https://www.letspets.co.kr",
+      "privacyPolicyUrl": "https://www.letspets.co.kr/privacy",
+      "marketingUrl": "https://www.letspets.co.kr"
+    },
+    "en-US": {
+      "name": "QUADRA Glass Camera",
+      "subtitle": "Shoot through patterned glass",
+      "keywords": "prism,refraction,lens,filter,effect,photo,video,distort,mosaic,artistic,live,aesthetic,vintage",
+      "promotionalText": "Three glass patterns, six dials. Watch the scene bend in real time and capture exactly what you see.",
+      "description": "Point your iPhone at anything and see it through a sheet of patterned glass. What the preview shows is what the photo and the video become.\n\nThis is not a filter painted on afterwards. Light is traced from air into glass and back out again, so a slightly thicker plate or a slightly larger cell changes the whole scene.\n\n■ Three patterns\nQuadra — broad square facets joined by soft rolls\nCross Large — regular heavy crossed ribs\nDiamond — diagonal facets that cut the scene on the bias\n\n■ Build the glass with a dial\nCell size, relief, corner roundness, thickness, edge roll and reflection brightness, all under your thumb on a half-circle dial that never covers the subject. Settings persist, and one reset returns everything to the start.\n\n■ Compare with the original\nOne tap shows the scene without glass. Two taps tell you exactly what changed.\n\n■ Video through the same glass\nChange pattern and dials while recording. The change is captured live. Allow the microphone and the sound comes with it.\n\n■ Stays on the device\nNo account. Nothing is uploaded. Every frame is processed on the iPhone GPU and saved to your photo library.\n\n■ Good to know\nThis is a prototype. The lighting reflection is a synthetic indoor preset and has not been matched against a manufactured glass sample. Capture is portrait 3:4 only; landscape is not supported. Recording ends when the app leaves the screen.\n\nRequires iOS 17 or later and an iPhone with a camera.",
+      "supportUrl": "https://www.letspets.co.kr",
+      "privacyPolicyUrl": "https://www.letspets.co.kr/privacy",
+      "marketingUrl": "https://www.letspets.co.kr"
+    },
+    "ja": {
+      "name": "ガラスカメラ",
+      "subtitle": "四角い模様越しに撮る写真と動画",
+      "keywords": "プリズム,屈折,レンズ,フィルター,エフェクト,加工,モザイク,歪み,アート,レトロ,リアルタイム,撮影,おしゃれ,ステンドグラス,自撮り,雰囲気,映え",
+      "promotionalText": "3種類の模様ガラスと6つのダイヤル。目の前の景色が屈折する瞬間を、見たまま撮ります。",
+      "description": "目の前の景色を、模様の入ったガラス越しに見ます。プレビューに映るそのままが写真になり、動画になります。\n\n撮影後にかけるフィルターではありません。空気からガラス、そして再び空気へと光が曲がる屈折を、その場で計算して描いています。だからガラスを少し厚くするだけ、セルを少し大きくするだけで景色が丸ごと変わります。\n\n■ 3種類の模様\nクアドラ — 広い四角い面がなだらかにつながる基本の模様\nCross Large — 太い十字のリブが規則正しく走る模様\nダイヤモンド — 斜めの面が景色を斜めに切る模様\n\n■ ダイヤルでガラスを作る\nセルの大きさ、起伏、角の丸み、厚み、境界の丸み、反射の明るさまで指先で調整します。調整パネルが被写体を隠しません。設定は保存され、リセット一回で最初の状態に戻ります。\n\n■ 元の景色と見比べる\nボタンひとつでガラスのない景色に戻ります。二回タップすれば、何が変わったのかがわかります。\n\n■ 動画も同じガラスで\n録画中でも模様とダイヤルを変えられます。変わっていく過程がそのまま映像に残ります。マイクを許可すれば音も一緒に録音されます。\n\n■ 端末の中だけで\nアカウントは不要です。送信される写真はありません。すべての処理はiPhoneのGPUで完結し、結果は写真ライブラリに保存されます。\n\n■ ご注意\nプロトタイプ段階のアプリです。照明の反射は仮想の室内照明で、実際のガラス製品との光学的な一致はまだ検証していません。撮影は縦3:4のみで、横向きには対応していません。動画はアプリが画面に表示されている間だけ録画されます。\n\niOS 17以降、カメラ付きのiPhoneが必要です。",
+      "supportUrl": "https://www.letspets.co.kr",
+      "privacyPolicyUrl": "https://www.letspets.co.kr/privacy",
+      "marketingUrl": "https://www.letspets.co.kr"
+    }
+  }
+}

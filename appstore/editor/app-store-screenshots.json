@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 2,
+  "appName": "유리 카메라",
+  "themeId": "quadra-glass",
+  "connectedCanvas": false,
+  "locales": [
+    "ko",
+    "en",
+    "ja"
+  ],
+  "locale": "ko",
+  "device": "iphone",
+  "orientation": "portrait",
+  "appIcon": "",
+  "slidesByDevice": {
+    "iphone": [
+      {
+        "id": "s_mppgoot8_1",
+        "layout": "device-bottom",
+        "label": {
+          "ko": "패턴 01",
+          "en": "PATTERN 01",
+          "ja": "模様 01"
+        },
+        "headline": {
+          "ko": "눈앞의 장면이\n유리가 됩니다",
+          "en": "The scene in front of you\nbecomes glass",
+          "ja": "目の前の景色が\nガラスになる"
+        },
+        "screenshot": "/screenshots/apple/iphone/{locale}/01.png",
+        "inverted": false
+      },
+      {
+        "id": "s_mppgoot8_2",
+        "layout": "two-devices",
+        "label": {
+          "ko": "원본 비교",
+          "en": "BEFORE / AFTER",
+          "ja": "原本と比較"
+        },
+        "headline": {
+          "ko": "원본과 유리,\n한 번의 탭으로",
+          "en": "Original and glass,\none tap apart",
+          "ja": "原本とガラス、\nワンタップで"
+        },
+        "screenshot": "/screenshots/apple/iphone/{locale}/02.png",
+        "screenshotSecondary": "/screenshots/apple/iphone/{locale}/01.png",
+        "inverted": false
+      },
+      {
+        "id": "s_mppgoot8_3",
+        "layout": "device-bottom",
+        "label": {
+          "ko": "패턴 세 가지",
+          "en": "THREE PATTERNS",
+          "ja": "3つの模様"
+        },
+        "headline": {
+          "ko": "쿼드라, 크로스,\n다이아몬드",
+          "en": "Quadra, Cross,\nDiamond",
+          "ja": "クアドラ、クロス、\nダイヤモンド"
+        },
+        "screenshot": "/screenshots/apple/iphone/{locale}/03.png",
+        "inverted": true
+      },
+      {
+        "id": "s_mpptmmaa_i",
+        "layout": "device-bottom",
+        "label": {
+          "ko": "다이얼",
+          "en": "THE DIAL",
+          "ja": "ダイヤル"
+        },
+        "headline": {
+          "ko": "유리를 직접\n만듭니다",
+          "en": "Build the glass\nyourself",
+          "ja": "ガラスを自分で\n作る"
+        },
+        "screenshot": "/screenshots/apple/iphone/{locale}/04.png",
+        "inverted": false
+      },
+      {
+        "id": "s_mpptvxsc_i",
+        "layout": "device-bottom",
+        "label": {
+          "ko": "동영상",
+          "en": "VIDEO",
+          "ja": "動画"
+        },
+        "headline": {
+          "ko": "동영상도\n같은 유리로",
+          "en": "Video through\nthe same glass",
+          "ja": "動画も\n同じガラスで"
+        },
+        "screenshot": "/screenshots/apple/iphone/{locale}/05.png",
+        "inverted": false
+      },
+      {
+        "id": "s_mppgoot8_4",
+        "layout": "no-device",
+        "label": {
+          "ko": "전부 기기 안에서",
+          "en": "ALL ON DEVICE",
+          "ja": "すべて端末の中で"
+        },
+        "headline": {
+          "ko": "계정 없음\n업로드 없음\n기기 안에서 끝",
+          "en": "No account.\nNo upload.\nAll on device.",
+          "ja": "アカウント不要\nアップロードなし\n端末の中で完結"
+        },
+        "screenshot": "",
+        "inverted": false
+      }
+    ],
+    "android": [
+      {
+        "id": "s_mppgoot8_5",
+        "layout": "hero",
+        "label": {
+          "en": "MEET YOUR APP"
+        },
+        "headline": {
+          "en": "Sell one\nidea per slide."
+        },
+        "screenshot": "",
+        "transforms": {
+          "device": {
+            "x": 221.0133038940457,
+            "y": 677.042167580437,
+            "width": 678.5844380403457,
+            "height": 1470.266282420749,
+            "rotation": 0,
+            "zIndex": 3
+          }
+        }
+      },
+      {
+        "id": "s_mppgoot8_6",
+        "layout": "device-bottom",
+        "label": {
+          "en": "FEATURE 01"
+        },
+        "headline": {
+          "en": "Your headline\nlives here."
+        },
+        "screenshot": "",
+        "transforms": {
+          "device": {
+            "x": 191.68310412906385,
+            "y": 659.512330975256,
+            "width": 678.5844380403457,
+            "height": 1470.266282420749,
+            "rotation": 0,
+            "zIndex": 3
+          }
+        }
+      },
+      {
+        "id": "s_mppgoot8_7",
+        "layout": "two-devices",
+        "label": {
+          "en": "FEATURE 02"
+        },
+        "headline": {
+          "en": "Show two\nscreens at once."
+        },
+        "screenshot": "",
+        "screenshotSecondary": "",
+        "transforms": {
+          "deviceSecondary": {
+            "x": 280.3938895417132,
+            "y": 525.2025777437636,
+            "width": 678.5844380403457,
+            "height": 1470.266282420749,
+            "rotation": 0,
+            "zIndex": 2
+          },
+          "device": {
+            "x": 143.75673196815296,
+            "y": 569.6411918847805,
+            "width": 610.7259942363112,
+            "height": 1323.239654178674,
+            "rotation": 0,
+            "zIndex": 3
+          }
+        }
+      },
+      {
+        "id": "s_mppgoot8_8",
+        "layout": "device-top",
+        "label": {
+          "en": "FEATURE 03"
+        },
+        "headline": {
+          "en": "Flip the contrast\nfor visual rhythm."
+        },
+        "screenshot": "",
+        "inverted": true
+      },
+      {
+        "id": "s_mppgoot8_9",
+        "layout": "no-device",
+        "label": {
+          "en": "MORE"
+        },
+        "headline": {
+          "en": "And so\nmuch more."
+        },
+        "screenshot": ""
+      }
+    ],
+    "ipad": [
+      {
+        "id": "s_mppgoot8_a",
+        "layout": "hero",
+        "label": {
+          "en": "MEET YOUR APP"
+        },
+        "headline": {
+          "en": "Made for\nthe big screen."
+        },
+        "screenshot": "",
+        "transforms": {
+          "device": {
+            "x": 68.64736263219729,
+            "y": 818.7701245593419,
+            "width": 1525.7087999999999,
+            "height": 1981.4399999999998,
+            "rotation": 0,
+            "zIndex": 3
+          }
+        }
+      },
+      {
+        "id": "s_mppgoot8_b",
+        "layout": "device-bottom",
+        "label": {
+          "en": "FEATURE 01"
+        },
+        "headline": {
+          "en": "Built for\nfocus."
+        },
+        "screenshot": ""
+      },
+      {
+        "id": "s_mppgoot8_c",
+        "layout": "device-top",
+        "label": {
+          "en": "FEATURE 02"
+        },
+        "headline": {
+          "en": "Always within reach."
+        },
+        "screenshot": "",
+        "inverted": true
+      }
+    ],
+    "android-7": [
+      {
+        "id": "s_mppgoot8_d",
+        "layout": "hero",
+        "label": {
+          "en": "MEET YOUR APP"
+        },
+        "headline": {
+          "en": "Pocket-sized\npower."
+        },
+        "screenshot": ""
+      },
+      {
+        "id": "s_mppgoot8_e",
+        "layout": "split-landscape",
+        "label": {
+          "en": "FEATURE 01"
+        },
+        "headline": {
+          "en": "Wide canvas,\nbigger ideas."
+        },
+        "screenshot": ""
+      }
+    ],
+    "android-10": [
+      {
+        "id": "s_mppgoot8_f",
+        "layout": "hero",
+        "label": {
+          "en": "MEET YOUR APP"
+        },
+        "headline": {
+          "en": "Made for\nthe big screen."
+        },
+        "screenshot": ""
+      },
+      {
+        "id": "s_mppgoot8_g",
+        "layout": "split-landscape",
+        "label": {
+          "en": "FEATURE 01"
+        },
+        "headline": {
+          "en": "Wide canvas,\nbigger ideas."
+        },
+        "screenshot": ""
+      }
+    ],
+    "feature-graphic": [
+      {
+        "id": "s_mppgoot8_h",
+        "layout": "feature-graphic",
+        "label": {},
+        "headline": {
+          "en": "Your tagline goes here."
+        },
+        "screenshot": ""
+      }
+    ]
+  },
+  "crossScreenMockupsByDevice": {
+    "iphone": [],
+    "ipad": [],
+    "android": [],
+    "android-7": [],
+    "android-10": [],
+    "feature-graphic": []
+  }
+}
