@@ -1,0 +1,7 @@
+.DS_Store
+build/
+build-sim/
+artifacts/
+*.xcresult/
+*.xcuserstate
+xcuserdata/

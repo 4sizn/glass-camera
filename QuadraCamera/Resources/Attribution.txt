@@ -1,0 +1,12 @@
+Sample image: “Orange Tabby Cat sitting on a couch” by LauraDelga.
+https://commons.wikimedia.org/wiki/File:Orange_Tabby_Cat_sitting_on_a_couch.jpg
+Licensed CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+The app crops the image for its sample preview and applies the Quadra renderer.
+The sample photo and derived sample renders retain this CC BY 4.0 attribution.
+
+User-supplied reference in docs/reference.png is a visual development reference,
+not an app sample, shader input, or evidence of a rendered result.
+
+sample-dog.jpg is the user's supplied images.jpeg. It is included in this local
+development build solely as the requested renderer regression input. Do not
+publish/distribute that fixture without separately confirming its rights.
