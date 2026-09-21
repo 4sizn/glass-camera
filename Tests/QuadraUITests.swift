@@ -31,7 +31,7 @@ final class QuadraUITests: XCTestCase {
         XCTAssertEqual(dial(in: app).value as? String,initialValue)
         app.buttons["compare"].tap()
         app.buttons["pattern-crossLarge"].tap()
-        XCTAssertTrue(app.staticTexts["QUADRA GLASS"].exists)
+        XCTAssertTrue(app.staticTexts["GLASS"].exists)
         app.buttons["reset-controls"].tap()
         XCTAssertTrue(app.buttons["pattern-quadra"].isSelected)
     }
@@ -237,7 +237,7 @@ final class QuadraUITests: XCTestCase {
         app.buttons["compare"].tap()
         XCTAssertTrue(app.staticTexts["ORIGINAL"].exists)
         app.buttons["compare"].tap()
-        XCTAssertTrue(app.staticTexts["QUADRA GLASS"].exists)
+        XCTAssertTrue(app.staticTexts["GLASS"].exists)
         let monitor = addUIInterruptionMonitor(withDescription: "Photos permission") { alert in
             for title in ["Allow Adding Photos", "Allow Access to Add Photos", "Allow", "사진 추가 허용", "허용"] {
                 if alert.buttons[title].exists { alert.buttons[title].tap(); return true }

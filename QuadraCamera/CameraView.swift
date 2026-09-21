@@ -94,7 +94,7 @@ struct CameraView: View {
                 ZStack(alignment: .bottom) {
                     MetalPreview(store: model.store, aspect: model.previewAspect) { model.errorMessage = $0 }
                         .frame(width: previewWidth, height: previewWidth/model.previewAspect)
-                        .accessibilityLabel("쿼드라 유리 카메라 미리보기")
+                        .accessibilityLabel("유리 카메라 미리보기")
                         .accessibilityIdentifier("camera-preview")
                         .onTapGesture(coordinateSpace: .local) { location in
                             focusPoint = location
@@ -109,7 +109,7 @@ struct CameraView: View {
                         HStack {
                             HStack(spacing: 6) {
                                 Circle().fill(model.showOriginal ? .white : accent).frame(width: 5,height: 5)
-                                Text(model.showOriginal ? "ORIGINAL" : "QUADRA GLASS").tracking(1.7)
+                                Text(model.showOriginal ? "ORIGINAL" : "GLASS").tracking(1.7)
                             }
                             Spacer()
                             if let started=model.recordingStartedAt {
@@ -180,7 +180,7 @@ struct CameraView: View {
     private var header: some View {
         HStack(alignment: .center) {
             VStack(alignment: .leading,spacing: 3) {
-                Text("QUADRA").font(.system(size: 22,weight: .light,design: .rounded)).tracking(6)
+                Text("GLASS CAMERA").font(.system(size: 19,weight: .light,design: .rounded)).tracking(4)
                 Text("A DIFFERENT WAY TO SEE").font(.system(size: 8,weight: .medium,design: .monospaced)).tracking(1.5).foregroundStyle(.gray)
             }
             Spacer()
@@ -342,7 +342,7 @@ struct CameraView: View {
     private var info: some View {
         NavigationStack {
             List {
-                Section("QUADRA") {
+                Section("유리 카메라") {
                     Text("눈앞의 장면을 사각 패턴 유리 너머로 바라보세요. 화면을 누르면 초점을 맞춥니다.")
                     PhotosPicker(selection: $pickerItem,matching: .images) { Label("내 사진으로 보기",systemImage: "photo.on.rectangle") }
                         .onChange(of: pickerItem) { _,value in if value != nil { showInfo = false } }

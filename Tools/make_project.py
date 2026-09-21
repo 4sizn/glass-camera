@@ -15,7 +15,7 @@ def obj(label, **value):
 def files(paths, build=True):
     refs, builds = [], []
     for path in paths:
-        kind = "sourcecode.swift" if path.endswith(".swift") else "text"
+        kind = {".swift":"sourcecode.swift",".xcassets":"folder.assetcatalog",".lproj":"folder"}.get(path[path.rfind("."):],"text")
         ref = obj(path, isa="PBXFileReference", lastKnownFileType=kind, path=path, sourceTree="<group>")
         refs.append(ref)
         if build: builds.append(obj("build:"+path, isa="PBXBuildFile", fileRef=ref))
@@ -23,7 +23,8 @@ def files(paths, build=True):
 
 swift = sorted(str(p.relative_to(ROOT)) for p in (ROOT/"QuadraCamera").glob("*.swift"))
 resources = sorted(str(p.relative_to(ROOT)) for p in (ROOT/"QuadraCamera/Resources").glob("*"))
-resources += ["QuadraCamera/Shaders/Quadra.metal"]
+resources += ["QuadraCamera/Shaders/Quadra.metal","QuadraCamera/Assets.xcassets"]
+resources += sorted(str(p.relative_to(ROOT)) for p in ROOT.glob("QuadraCamera/*.lproj"))
 source_refs, source_builds = files(swift)
 resource_refs, resource_builds = files(resources)
 info_refs, _ = files(["QuadraCamera/Info.plist"],False)
@@ -43,7 +44,7 @@ def configs(name, settings):
     return obj(name+"configs",isa="XCConfigurationList",buildConfigurations=refs,defaultConfigurationIsVisible=0,defaultConfigurationName="Release")
 
 common = {"SDKROOT":"iphoneos","IPHONEOS_DEPLOYMENT_TARGET":"17.0","SWIFT_VERSION":"5.0", "CLANG_ENABLE_MODULES":"YES","TARGETED_DEVICE_FAMILY":"1","CODE_SIGN_STYLE":"Automatic"}
-app_settings = dict(common, PRODUCT_BUNDLE_IDENTIFIER="com.lotus.quadraglass",PRODUCT_NAME="QUADRA",INFOPLIST_FILE="QuadraCamera/Info.plist",DEVELOPMENT_TEAM="VN497S6KK3",SUPPORTED_PLATFORMS="iphoneos iphonesimulator",ENABLE_USER_SCRIPT_SANDBOXING="YES",SWIFT_EMIT_LOC_STRINGS="NO")
+app_settings = dict(common, PRODUCT_BUNDLE_IDENTIFIER="com.lotus.quadraglass",PRODUCT_NAME="QUADRA",INFOPLIST_FILE="QuadraCamera/Info.plist",DEVELOPMENT_TEAM="VN497S6KK3",SUPPORTED_PLATFORMS="iphoneos iphonesimulator",ENABLE_USER_SCRIPT_SANDBOXING="YES",SWIFT_EMIT_LOC_STRINGS="NO",ASSETCATALOG_COMPILER_APPICON_NAME="AppIcon")
 source_phase=obj("sources",isa="PBXSourcesBuildPhase",buildActionMask=2147483647,files=source_builds,runOnlyForDeploymentPostprocessing=0)
 resource_phase=obj("resources",isa="PBXResourcesBuildPhase",buildActionMask=2147483647,files=resource_builds,runOnlyForDeploymentPostprocessing=0)
 app=obj("app-target",isa="PBXNativeTarget",buildConfigurationList=configs("app",app_settings),buildPhases=[source_phase,resource_phase],buildRules=[],dependencies=[],name="QUADRA",productName="QUADRA",productReference=product,productType="com.apple.product-type.application")
