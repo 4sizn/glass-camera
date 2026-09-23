@@ -75,7 +75,6 @@ final class PreviewStore: @unchecked Sendable {
     var showOriginal = false { didSet { store.update(material, original: showOriginal) } }
     var lastPhoto: URL?
     var lastThumbnail: UIImage?
-    private var pendingSave: URL?
     private var persistTask: Task<Void, Never>?
     private var recordingTask: Task<Void, Never>?
     private let recorder: VideoRecorder
@@ -202,7 +201,6 @@ final class PreviewStore: @unchecked Sendable {
                 try? await engine.setMicrophone(enabled: false)
                 lastPhoto=result.url; lastThumbnail=await Self.videoThumbnail(result.url)
                 UserDefaults.standard.set(result.url.path,forKey: "last-photo")
-                pendingSave=result.url
                 #if DEBUG
                 let record: [String:Any] = ["file":result.url.lastPathComponent,"duration":result.duration,
                     "frames":result.frames,"audioBuffers":result.audioBuffers,"width":1080,"height":1440,
@@ -352,7 +350,6 @@ final class PreviewStore: @unchecked Sendable {
                         return
                     }
                     #endif
-                    self.pendingSave = file
                     await self.saveToPhotos(file)
                 }
             } catch {
@@ -361,17 +358,11 @@ final class PreviewStore: @unchecked Sendable {
         }
     }
 
-    func retrySave() {
-        guard let pendingSave, !isSaving else { return }
-        isSaving = true
-        Task { await saveToPhotos(pendingSave) }
-    }
-
     private func saveToPhotos(_ url: URL) async {
         let permission = await PHPhotoLibrary.requestAuthorization(for: .addOnly)
         guard permission == .authorized || permission == .limited else {
             isSaving = false
-            errorMessage = "사진 추가 권한이 필요합니다. 결과는 앱에 보관되어 있으므로 최근 사진에서 공유하거나 다시 저장할 수 있습니다."
+            errorMessage = "사진 추가 권한이 필요합니다. 설정에서 사진 접근을 허용해 주세요."
             return
         }
         do {
@@ -379,7 +370,7 @@ final class PreviewStore: @unchecked Sendable {
                 let request = PHAssetCreationRequest.forAsset()
                 request.addResource(with: url.pathExtension == "mp4" ? .video : .photo, fileURL: url, options: nil)
             }
-            pendingSave = nil; isSaving = false
+            isSaving = false
             notice = url.pathExtension == "mp4" ? "동영상을 사진 앱에 저장했어요" : "사진 앱에 저장했어요"
             UIAccessibility.post(notification: .announcement, argument: notice)
         } catch { isSaving = false; errorMessage = "저장 실패: \(error.localizedDescription)" }

@@ -72,7 +72,6 @@ final class QuadraUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["동영상을 사진 앱에 저장했어요"].waitForExistence(timeout: 60))
         app.buttons["recent-capture"].tap()
         XCTAssertTrue(app.navigationBars["최근 촬영"].waitForExistence(timeout: 10))
-        XCTAssertTrue(app.buttons["공유"].exists)
         assertVideoVisible(in: app)
         let playback=XCTAttachment(screenshot: app.screenshot())
         playback.name="glass-video-playback"; playback.lifetime = .keepAlways; add(playback)

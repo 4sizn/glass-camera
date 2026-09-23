@@ -329,10 +329,6 @@ struct CameraView: View {
                     } else if let image = UIImage(contentsOfFile: url.path) {
                         Image(uiImage: image).resizable().scaledToFit()
                     }
-                    HStack(spacing: 24) {
-                        ShareLink(item: url) { Label("공유",systemImage: "square.and.arrow.up") }
-                        Button("저장 재시도") { model.retrySave() }.disabled(model.isSaving)
-                    }.padding()
                 }
             }.navigationTitle("최근 촬영").navigationBarTitleDisplayMode(.inline)
                 .toolbar { ToolbarItem(placement: .confirmationAction) { Button("닫기") { showPhoto = false } } }
