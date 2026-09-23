@@ -208,6 +208,24 @@
 			<key>fileRef</key>
 			<string>1E40CA1DE6DC79378A44A57C</string>
 		</dict>
+		<key>F1716325065103A35420916F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>QuadraCamera/Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDED15A7CEF4823E052905E5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>fileRef</key>
+			<string>F1716325065103A35420916F</string>
+		</dict>
 		<key>E5B4B3DD0E3D3DE5E2F7F211</key>
 		<dict>
 			<key>isa</key>
@@ -290,6 +308,7 @@
 				<string>F20BE1EE62C2F6C823D012FB</string>
 				<string>EA9356E480FFC3FDE00C86FE</string>
 				<string>1E40CA1DE6DC79378A44A57C</string>
+				<string>F1716325065103A35420916F</string>
 				<string>E5B4B3DD0E3D3DE5E2F7F211</string>
 				<string>7C6054F5180F9C764E432F53</string>
 				<string>FBDC4F23F93125BBEEAE800C</string>
@@ -328,6 +347,7 @@
 				<string>CB582DCC56BE2E9DF764259D</string>
 				<string>7F9A356832792F22B36AEF6F</string>
 				<string>65540BC49C5990A7C78A2358</string>
+				<string>CDED15A7CEF4823E052905E5</string>
 			</array>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<integer>0</integer>
@@ -366,6 +386,8 @@
 				<string>YES</string>
 				<key>SWIFT_EMIT_LOC_STRINGS</key>
 				<string>NO</string>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
 				<key>SWIFT_OPTIMIZATION_LEVEL</key>
 				<string>-Onone</string>
 				<key>DEBUG_INFORMATION_FORMAT</key>
@@ -408,6 +430,8 @@
 				<string>YES</string>
 				<key>SWIFT_EMIT_LOC_STRINGS</key>
 				<string>NO</string>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
 				<key>SWIFT_OPTIMIZATION_LEVEL</key>
 				<string>-O</string>
 				<key>DEBUG_INFORMATION_FORMAT</key>
