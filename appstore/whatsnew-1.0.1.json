@@ -1,0 +1,8 @@
+{
+  "bundleId": "com.lotus.quadraglass",
+  "locales": {
+    "ko": { "whatsNew": "새 앱 아이콘: 쿼드라 유리 너머로 본 고양이.\n안정성을 개선했습니다." },
+    "en-US": { "whatsNew": "New app icon: a cat seen through Quadra glass.\nStability improvements." },
+    "ja": { "whatsNew": "新しいアプリアイコン：クアドラガラス越しに見た猫。\n安定性を改善しました。" }
+  }
+}

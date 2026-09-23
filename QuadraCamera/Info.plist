@@ -8,8 +8,8 @@
 <key>CFBundleExecutable</key><string>$(EXECUTABLE_NAME)</string>
 <key>CFBundleName</key><string>$(PRODUCT_NAME)</string>
 <key>CFBundlePackageType</key><string>APPL</string>
-<key>CFBundleShortVersionString</key><string>1.0.0</string>
-<key>CFBundleVersion</key><string>2</string>
+<key>CFBundleShortVersionString</key><string>1.0.1</string>
+<key>CFBundleVersion</key><string>3</string>
 <key>LSRequiresIPhoneOS</key><true/>
 <key>ITSAppUsesNonExemptEncryption</key><false/>
 <key>NSCameraUsageDescription</key><string>카메라 영상을 사각 패턴 유리 너머로 보여주고 사진과 동영상을 촬영합니다.</string>
