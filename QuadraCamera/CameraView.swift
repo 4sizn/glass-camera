@@ -79,6 +79,7 @@ struct CameraView: View {
     @Environment(\.scenePhase) private var scenePhase
     @State private var selectedControlID = "pitch"
     @State private var showPhoto = false
+    @State private var recentAd = RecentCaptureAd()
     @State private var showInfo = false
     @State private var pickerItem: PhotosPickerItem?
     @State private var focusPoint: CGPoint?
@@ -268,7 +269,7 @@ struct CameraView: View {
     private var captureButtons: some View {
             HStack {
                 Button {
-                    showPhoto = true
+                    recentAd.show { showPhoto = true }
                 } label: {
                     Group {
                         if let thumbnail = model.lastThumbnail { Image(uiImage: thumbnail).resizable().scaledToFill() }

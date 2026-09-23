@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the dependency-free Xcode project using a standard plist."""
+"""Generate the Xcode project using a standard plist."""
 from pathlib import Path
 import hashlib
 import plistlib
@@ -45,16 +45,19 @@ def configs(name, settings):
 
 common = {"SDKROOT":"iphoneos","IPHONEOS_DEPLOYMENT_TARGET":"17.0","SWIFT_VERSION":"5.0", "CLANG_ENABLE_MODULES":"YES","TARGETED_DEVICE_FAMILY":"1","CODE_SIGN_STYLE":"Automatic"}
 app_settings = dict(common, PRODUCT_BUNDLE_IDENTIFIER="com.lotus.quadraglass",PRODUCT_NAME="QUADRA",INFOPLIST_FILE="QuadraCamera/Info.plist",DEVELOPMENT_TEAM="VN497S6KK3",SUPPORTED_PLATFORMS="iphoneos iphonesimulator",ENABLE_USER_SCRIPT_SANDBOXING="YES",SWIFT_EMIT_LOC_STRINGS="NO",ASSETCATALOG_COMPILER_APPICON_NAME="AppIcon")
+package=obj("gma-package",isa="XCRemoteSwiftPackageReference",repositoryURL="https://github.com/googleads/swift-package-manager-google-mobile-ads.git",requirement={"kind":"upToNextMajorVersion","minimumVersion":"13.10.0"})
+gma=obj("gma-product",isa="XCSwiftPackageProductDependency",package=package,productName="GoogleMobileAds")
+frameworks_phase=obj("frameworks",isa="PBXFrameworksBuildPhase",buildActionMask=2147483647,files=[obj("build:gma",isa="PBXBuildFile",productRef=gma)],runOnlyForDeploymentPostprocessing=0)
 source_phase=obj("sources",isa="PBXSourcesBuildPhase",buildActionMask=2147483647,files=source_builds,runOnlyForDeploymentPostprocessing=0)
 resource_phase=obj("resources",isa="PBXResourcesBuildPhase",buildActionMask=2147483647,files=resource_builds,runOnlyForDeploymentPostprocessing=0)
-app=obj("app-target",isa="PBXNativeTarget",buildConfigurationList=configs("app",app_settings),buildPhases=[source_phase,resource_phase],buildRules=[],dependencies=[],name="QUADRA",productName="QUADRA",productReference=product,productType="com.apple.product-type.application")
+app=obj("app-target",isa="PBXNativeTarget",buildConfigurationList=configs("app",app_settings),buildPhases=[source_phase,frameworks_phase,resource_phase],buildRules=[],dependencies=[],name="QUADRA",packageProductDependencies=[gma],productName="QUADRA",productReference=product,productType="com.apple.product-type.application")
 project_key=hashlib.sha1(b"project").hexdigest()[:24].upper()
 proxy=obj("test-proxy",isa="PBXContainerItemProxy",containerPortal=project_key,proxyType=1,remoteGlobalIDString=app,remoteInfo="QUADRA")
 dependency=obj("test-dependency",isa="PBXTargetDependency",target=app,targetProxy=proxy)
 test_phase=obj("test-sources",isa="PBXSourcesBuildPhase",buildActionMask=2147483647,files=test_builds,runOnlyForDeploymentPostprocessing=0)
 test_settings=dict(common,PRODUCT_BUNDLE_IDENTIFIER="com.lotus.quadraglass.uitests",PRODUCT_NAME="QuadraUITests",GENERATE_INFOPLIST_FILE="YES",TEST_TARGET_NAME="QUADRA",DEVELOPMENT_TEAM="VN497S6KK3")
 tests=obj("tests-target",isa="PBXNativeTarget",buildConfigurationList=configs("tests",test_settings),buildPhases=[test_phase],buildRules=[],dependencies=[dependency],name="QuadraUITests",productName="QuadraUITests",productReference=tests_product,productType="com.apple.product-type.bundle.ui-testing")
-obj("project",isa="PBXProject",attributes={"LastUpgradeCheck":"2600","TargetAttributes":{app:{"CreatedOnToolsVersion":"26.0"},tests:{"CreatedOnToolsVersion":"26.0","TestTargetID":app}}},buildConfigurationList=configs("project",{}),compatibilityVersion="Xcode 14.0",developmentRegion="ko",knownRegions=["ko","en","Base"],mainGroup=group,productRefGroup=products,projectDirPath="",projectRoot="",targets=[app,tests])
+obj("project",isa="PBXProject",attributes={"LastUpgradeCheck":"2600","TargetAttributes":{app:{"CreatedOnToolsVersion":"26.0"},tests:{"CreatedOnToolsVersion":"26.0","TestTargetID":app}}},buildConfigurationList=configs("project",{}),compatibilityVersion="Xcode 14.0",developmentRegion="ko",knownRegions=["ko","en","Base"],mainGroup=group,packageReferences=[package],productRefGroup=products,projectDirPath="",projectRoot="",targets=[app,tests])
 directory=ROOT/"QUADRA.xcodeproj"
 directory.mkdir(exist_ok=True)
 with (directory/"project.pbxproj").open("wb") as f:

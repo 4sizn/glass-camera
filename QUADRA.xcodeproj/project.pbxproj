@@ -100,6 +100,24 @@
 			<key>fileRef</key>
 			<string>C04923134A07D0CC236A20E6</string>
 		</dict>
+		<key>3969804A9C688D7D211E6D70</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>QuadraCamera/InterstitialAd.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>33D7AA7736AC133BE1B7E1BE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>fileRef</key>
+			<string>3969804A9C688D7D211E6D70</string>
+		</dict>
 		<key>DB745CC97ACCF71AA5220D53</key>
 		<dict>
 			<key>isa</key>
@@ -356,6 +374,7 @@
 				<string>90E895F00B9EA847D8B6379B</string>
 				<string>23E0B936088BE8235E81B80B</string>
 				<string>C04923134A07D0CC236A20E6</string>
+				<string>3969804A9C688D7D211E6D70</string>
 				<string>DB745CC97ACCF71AA5220D53</string>
 				<string>646FCB0B8AD27A334D621C35</string>
 				<string>0CE69E01412C1140CB5378B8</string>
@@ -373,6 +392,49 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>7704EA0F0097B48D9CF7B807</key>
+		<dict>
+			<key>isa</key>
+			<string>XCRemoteSwiftPackageReference</string>
+			<key>repositoryURL</key>
+			<string>https://github.com/googleads/swift-package-manager-google-mobile-ads.git</string>
+			<key>requirement</key>
+			<dict>
+				<key>kind</key>
+				<string>upToNextMajorVersion</string>
+				<key>minimumVersion</key>
+				<string>13.10.0</string>
+			</dict>
+		</dict>
+		<key>231555870DFF966DADDEBDD3</key>
+		<dict>
+			<key>isa</key>
+			<string>XCSwiftPackageProductDependency</string>
+			<key>package</key>
+			<string>7704EA0F0097B48D9CF7B807</string>
+			<key>productName</key>
+			<string>GoogleMobileAds</string>
+		</dict>
+		<key>B495E37B208EFCE9E568514E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>productRef</key>
+			<string>231555870DFF966DADDEBDD3</string>
+		</dict>
+		<key>7561BFB015D8F536760CB671</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>buildActionMask</key>
+			<integer>2147483647</integer>
+			<key>files</key>
+			<array>
+				<string>B495E37B208EFCE9E568514E</string>
+			</array>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<integer>0</integer>
+		</dict>
 		<key>BCE16DD0260827ECF338C787</key>
 		<dict>
 			<key>isa</key>
@@ -386,6 +448,7 @@
 				<string>7C15F1B9B26A73575BCF9DEB</string>
 				<string>18D1D553EB0B5033CC7E8829</string>
 				<string>99FB8261CAC516D16971B703</string>
+				<string>33D7AA7736AC133BE1B7E1BE</string>
 				<string>0EB43F97053444AFDFD45276</string>
 			</array>
 			<key>runOnlyForDeploymentPostprocessing</key>
@@ -521,6 +584,7 @@
 			<key>buildPhases</key>
 			<array>
 				<string>BCE16DD0260827ECF338C787</string>
+				<string>7561BFB015D8F536760CB671</string>
 				<string>0189424A5A60FED329FA868E</string>
 			</array>
 			<key>buildRules</key>
@@ -529,6 +593,10 @@
 			<array/>
 			<key>name</key>
 			<string>QUADRA</string>
+			<key>packageProductDependencies</key>
+			<array>
+				<string>231555870DFF966DADDEBDD3</string>
+			</array>
 			<key>productName</key>
 			<string>QUADRA</string>
 			<key>productReference</key>
@@ -766,6 +834,10 @@
 			</array>
 			<key>mainGroup</key>
 			<string>870B3294C0CBD48AF6BBCC1B</string>
+			<key>packageReferences</key>
+			<array>
+				<string>7704EA0F0097B48D9CF7B807</string>
+			</array>
 			<key>productRefGroup</key>
 			<string>FBDC4F23F93125BBEEAE800C</string>
 			<key>projectDirPath</key>

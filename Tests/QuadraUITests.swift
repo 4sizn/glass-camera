@@ -4,7 +4,7 @@ import UIKit
 final class QuadraUITests: XCTestCase {
     @MainActor func testPatternsSelectionPersistenceAndCapture() throws {
         let app=XCUIApplication()
-        app.launchArguments=["--sample"]
+        app.launchArguments=["--no-ads","--sample"]
         app.launch()
         XCTAssertTrue(app.buttons["reset-controls"].waitForExistence(timeout: 15))
         app.buttons["reset-controls"].tap()
@@ -41,6 +41,7 @@ final class QuadraUITests: XCTestCase {
         throw XCTSkip("Requires the attached camera and microphone")
         #else
         let app=XCUIApplication()
+        app.launchArguments=["--no-ads"]
         let monitor=addUIInterruptionMonitor(withDescription: "Recording permissions") { alert in
             for title in ["Allow","OK","허용","확인","Allow Adding Photos","사진 추가 허용"] {
                 if alert.buttons[title].exists { alert.buttons[title].tap(); return true }
@@ -150,7 +151,7 @@ final class QuadraUITests: XCTestCase {
         throw XCTSkip("Requires front and rear cameras on an iPhone")
         #else
         let app = XCUIApplication()
-        app.launchArguments = ["--sample"]
+        app.launchArguments=["--no-ads","--sample"]
         app.launch()
         XCTAssertTrue(app.buttons["카메라로 돌아가기"].waitForExistence(timeout: 15))
         app.buttons["카메라로 돌아가기"].tap()
@@ -174,7 +175,7 @@ final class QuadraUITests: XCTestCase {
         throw XCTSkip("Requires the attached physical iPhone")
         #else
         let app=XCUIApplication()
-        app.launchArguments=["--device-validation"]
+        app.launchArguments=["--no-ads","--device-validation"]
         let monitor=addUIInterruptionMonitor(withDescription: "Camera permission") { alert in
             for title in ["Allow","OK","허용","확인"] {
                 if alert.buttons[title].exists { alert.buttons[title].tap(); return true }
@@ -204,7 +205,7 @@ final class QuadraUITests: XCTestCase {
 
     @MainActor func testSampleControlsAndCapture() throws {
         let app = XCUIApplication()
-        app.launchArguments = ["--sample"]
+        app.launchArguments=["--no-ads","--sample"]
         app.launch()
         XCTAssertTrue(app.buttons["shutter"].waitForExistence(timeout: 15))
         let control=dial(in: app)
@@ -258,7 +259,7 @@ final class QuadraUITests: XCTestCase {
     // hardware and permission dialogs; each stop is attached as store-N-<name>.
     @MainActor func testAppStoreScreenshots() throws {
         let app=XCUIApplication()
-        app.launchArguments=["--sample"]
+        app.launchArguments=["--no-ads","--sample"]
         app.launch()
         XCTAssertTrue(app.buttons["reset-controls"].waitForExistence(timeout: 30))
         app.buttons["reset-controls"].tap()
