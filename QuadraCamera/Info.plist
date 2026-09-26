@@ -8,8 +8,8 @@
 <key>CFBundleExecutable</key><string>$(EXECUTABLE_NAME)</string>
 <key>CFBundleName</key><string>$(PRODUCT_NAME)</string>
 <key>CFBundlePackageType</key><string>APPL</string>
-<key>CFBundleShortVersionString</key><string>1.0.1</string>
-<key>CFBundleVersion</key><string>4</string>
+<key>CFBundleShortVersionString</key><string>1.0.2</string>
+<key>CFBundleVersion</key><string>5</string>
 <key>LSRequiresIPhoneOS</key><true/>
 <key>GADApplicationIdentifier</key><string>ca-app-pub-4045474417631564~2502575604</string>
 <key>SKAdNetworkItems</key><array><dict><key>SKAdNetworkIdentifier</key><string>cstr6suwn9.skadnetwork</string></dict></array>
